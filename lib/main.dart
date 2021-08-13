@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tic_tac_toe/board_tile.dart';
+import 'package:tic_tac_toe/tile_state.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,6 +12,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  var _boardState = List.filled(9, TileState.EMPTY);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
